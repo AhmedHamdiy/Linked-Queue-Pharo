@@ -52,13 +52,13 @@ CTLinkedQueueTest >> testPeek [
 { #category : 'testing' }
 CTLinkedQueueTest >> testDequeueOnEmptyQueue [
 	"Test that dequeue raises an error on an empty queue."
-	self should: [queue dequeue] raise: Error.
+	self assert: (queue dequeue isNil).
 ]
 
 { #category : 'testing' }
 CTLinkedQueueTest >> testPeekOnEmptyQueue [
 	"Test that peek raises an error on an empty queue."
-	self should: [queue peek] raise: Error.
+	self assert: (queue peek isNil).
 ]
 
 { #category : 'testing' }

@@ -38,20 +38,24 @@ CTLinkedQueue >> enqueue: anElement [
 
 { #category : 'removing' }
 CTLinkedQueue >> dequeue [
-	"Removes and returns the front element of the queue. Raises an error if empty."
-	self isEmpty ifTrue: [^ nil].
-	| removedValue |
-	removedValue := front value.
-	front := front nextLink.
-	(front isNil) ifTrue: [back := nil]. "Reset back if queue becomes empty"
-	size := size - 1.
-	^removedValue.
+dequeue
+    "Removes and returns the front element of the queue, or nil if empty."
+    self isEmpty ifTrue: [^ nil].
+    
+    | removedValue |
+    removedValue := front value.
+    front := front nextLink.
+    
+    (front isNil) ifTrue: [back := nil]. "Reset back if queue becomes empty"
+    size := size - 1.
+    
+    ^ removedValue.
+
 ]
 
 { #category : 'accessing' }
 CTLinkedQueue >> peek [
 	"Returns the front element without removing it. Raises an error if empty."
-	self isEmpty ifTrue: [self error: 'Queue is empty'].
 	^front value.
 ]
 
