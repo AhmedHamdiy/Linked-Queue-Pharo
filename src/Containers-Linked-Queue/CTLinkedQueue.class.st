@@ -39,7 +39,7 @@ CTLinkedQueue >> enqueue: anElement [
 { #category : 'removing' }
 CTLinkedQueue >> dequeue [
 	"Removes and returns the front element of the queue. Raises an error if empty."
-	self isEmpty ifTrue: [self error: 'Cannot dequeue from an empty queue'].
+	self isEmpty ifTrue: [^ nil].
 	| removedValue |
 	removedValue := front value.
 	front := front nextLink.
