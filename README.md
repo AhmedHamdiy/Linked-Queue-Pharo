@@ -8,15 +8,21 @@ CTLinkedQueue uses instances of CTValueLink as nodes to store elements.
 Usage
 To use CTLinkedQueue, create an instance and call enqueue: to add elements and dequeue to remove elements. The peek method returns the front element without removing it.
 
-Example
-smalltalk
-Copy
-Edit
+Example:
+
+
 | queue |
+
 queue := CTLinkedQueue new.
+
 queue enqueue: 1.
+
 queue enqueue: 2.
+
 queue enqueue: 3.
+
 queue dequeue.   "Removes 1"
+
 queue peek.      "Returns 2"
+
 queue
