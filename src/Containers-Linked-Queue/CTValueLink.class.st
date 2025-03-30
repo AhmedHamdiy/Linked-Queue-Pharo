@@ -11,7 +11,7 @@ Class {
 	#instVars : [
 		'value'
 	],
-	#category : 'Containers-LinkedList'
+	#category : 'Containers-Linked-Queue'
 }
 
 { #category : #'instance creation' }
