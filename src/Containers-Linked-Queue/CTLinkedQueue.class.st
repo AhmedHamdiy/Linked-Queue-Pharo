@@ -16,8 +16,6 @@ CTLinkedQueue class >> new [
 { #category : 'initialization' }
 CTLinkedQueue >> initialize [
 	"Initialize an empty queue"
-	front := nil.
-	back := nil.
 	size := 0.
 ]
 
