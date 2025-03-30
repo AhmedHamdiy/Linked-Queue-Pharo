@@ -4,8 +4,8 @@ Class {
 	#instVars : [
 		'front', 'back', 'size'
 	],
-	#category : 'Containers-LinkedList',
-	#package : 'Containers-LinkedList'
+	#category : 'Containers-Linked-Queue',
+	#package : 'Containers-Linked-Queue'
 }
 
 { #category : 'instance creation' }
