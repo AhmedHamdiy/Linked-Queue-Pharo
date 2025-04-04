@@ -2,14 +2,14 @@
 I am a baseline
 "
 Class {
-	#name : 'BaselineOfLinkedQueue',
+	#name : 'BaselineOfContainersLinkedQueue',
 	#superclass : 'BaselineOf',
-	#category : 'BaselineOfLinkedQueue',
-	#package : 'BaselineOfLinkedQueue'
+	#category : 'BaselineOfContainersLinkedQueue',
+	#package : 'BaselineOfContainersLinkedQueue'
 }
 
-{ #category : 'baselines' }
-BaselineOfLinkedQueue >> baseline: spec [
+{ #category : #baselines }
+BaselineOfContainersLinkedQueue >> baseline: spec [
 
 	<baseline>
 	spec for: #common do: [ "Packages"

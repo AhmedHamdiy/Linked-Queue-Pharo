@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'nextLink'
 	],
-	#category : 'Containers-Linked-Queue'
+	#category : #'Containers-Linked-Queue'
 }
 
 { #category : #'instance creation' }
