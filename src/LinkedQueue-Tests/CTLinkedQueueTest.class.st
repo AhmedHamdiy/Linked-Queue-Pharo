@@ -1,18 +1,19 @@
-TestCase subclass: #CTLinkedQueueTest
-	instanceVariableNames: 'queue'
-	classVariableNames: ''
-	poolDictionaries: ''
-	#category: #'LinkedQueue-Tests'.
+Class {
+	#name : #CTLinkedQueueTest,
+	#superclass : #TestCase,
+	#category : #'LinkedQueue-Tests'
+}
 
-{ #category : #setup }
-CTLinkedQueueTest >> setUp [
-	"Initialize a new queue before each test."
-	queue := CTLinkedQueue new.
+{ #category : #tests }
+CTLinkedQueueTest >> queueClass [
+	^ CTLinkedQueue
 ]
 
 { #category : #tests }
 CTLinkedQueueTest >> testInitialize [
 	"Test that a new queue is empty."
+	| queue |
+	queue := self queueClass new.
 	self assert: queue isEmpty.
 	self assert: queue size = 0.
 ]
@@ -20,6 +21,8 @@ CTLinkedQueueTest >> testInitialize [
 { #category : #tests }
 CTLinkedQueueTest >> testAdd [
 	"Test add operation."
+	| queue |
+	queue := self queueClass new.
 	queue add: 1.
 	queue add: 2.
 	queue add: 3.
@@ -31,6 +34,8 @@ CTLinkedQueueTest >> testAdd [
 { #category : #tests }
 CTLinkedQueueTest >> testremove [
 	"Test remove operation."
+	| queue |
+	queue := self queueClass new.
 	queue add: 'a'.
 	queue add: 'b'.
 	queue add: 'c'.
@@ -43,6 +48,8 @@ CTLinkedQueueTest >> testremove [
 { #category : #tests }
 CTLinkedQueueTest >> testPeek [
 	"Test peek method."
+	| queue |
+	queue := self queueClass new.
 	queue add: 100.
 	queue add: 200.
 	self assert: (queue peek = 100).
@@ -52,18 +59,24 @@ CTLinkedQueueTest >> testPeek [
 { #category : #tests }
 CTLinkedQueueTest >> testremoveOnEmptyQueue [
 	"Test that remove returns nil if the queue is empty."
+	| queue |
+	queue := self queueClass new.
 	self assert: (queue remove isNil).
 ]
 
 { #category : #tests }
 CTLinkedQueueTest >> testPeekOnEmptyQueue [
 	"Test that peek return nil if it is an empty queue."
+	| queue |
+	queue := self queueClass new.
 	self assert: (queue peek isNil).
 ]
 
 { #category : #tests }
 CTLinkedQueueTest >> testFIFOBehavior [
 	"Test that the queue follows FIFO order."
+	| queue |
+	queue := self queueClass new.
 	queue add: 10.
 	queue add: 20.
 	queue add: 30.
@@ -78,6 +91,8 @@ CTLinkedQueueTest >> testFIFOBehavior [
 { #category : #tests }
 CTLinkedQueueTest >> testSizeAfterOperations [
     "Test that size updates correctly after adding and removing elements."
+	| queue |
+	queue := self queueClass new.
     queue add: 5.
     queue add: 6.
     queue add: 7.
@@ -92,6 +107,8 @@ CTLinkedQueueTest >> testSizeAfterOperations [
 { #category : #tests }
 CTLinkedQueueTest >> testAddAndRemoveAlternating [
     "Test adding and removing elements alternately."
+	| queue |
+	queue := self queueClass new.
     queue add: 'x'.
     self assert: (queue remove = 'x').
     queue add: 'y'.
@@ -104,6 +121,8 @@ CTLinkedQueueTest >> testAddAndRemoveAlternating [
 { #category : #tests }
 CTLinkedQueueTest >> testClearQueue [
     "Test clearing the queue."
+	| queue |
+	queue := self queueClass new.
     queue add: 1.
     queue add: 2.
     queue add: 3.
@@ -116,6 +135,8 @@ CTLinkedQueueTest >> testClearQueue [
 { #category : #tests }
 CTLinkedQueueTest >> testContains [
     "Test checking if the queue contains an element."
+	| queue |
+	queue := self queueClass new.
     queue add: 'apple'.
     queue add: 'banana'.
     queue add: 'cherry'.
@@ -127,6 +148,8 @@ CTLinkedQueueTest >> testContains [
 { #category : #tests }
 CTLinkedQueueTest >> testAsArrayAfterOperations [
     "Test that asArray correctly represents queue state."
+	| queue |
+	queue := self queueClass new.
     queue add: 42.
     queue add: 24.
     queue remove.
@@ -136,18 +159,19 @@ CTLinkedQueueTest >> testAsArrayAfterOperations [
 { #category : #tests }
 CTLinkedQueueTest >> testAddNil [
     "Test adding nil to the queue."
+	| queue |
+	queue := self queueClass new.
     queue add: nil.
     self assert: queue size = 1.
     self assert: (queue remove isNil).
     self assert: queue isEmpty.
 ]
 
-""""""""""""""""
-
-
 { #category : #tests }
 CTLinkedQueueTest >> testSizeAfterOperations [
     "Test that size updates correctly after adding and removing elements."
+	| queue |
+	queue := self queueClass new.
     queue add: 5.
     queue add: 6.
     queue add: 7.
@@ -162,6 +186,8 @@ CTLinkedQueueTest >> testSizeAfterOperations [
 { #category : #tests }
 CTLinkedQueueTest >> testAddAndRemoveAlternating [
     "Test adding and removing elements alternately."
+	| queue |
+	queue := self queueClass new.
     queue add: 'x'.
     self assert: (queue remove = 'x').
     queue add: 'y'.
@@ -174,6 +200,8 @@ CTLinkedQueueTest >> testAddAndRemoveAlternating [
 { #category : #tests }
 CTLinkedQueueTest >> testClearQueue [
     "Test clearing the queue."
+	| queue |
+	queue := self queueClass new.
     queue add: 1.
     queue add: 2.
     queue add: 3.
@@ -186,6 +214,8 @@ CTLinkedQueueTest >> testClearQueue [
 { #category : #tests }
 CTLinkedQueueTest >> testIncludes [
     "Test checking if the queue contains an element."
+	| queue |
+	queue := self queueClass new.
     queue add: 'apple'.
     queue add: 'banana'.
     queue add: 'cherry'.
@@ -197,6 +227,8 @@ CTLinkedQueueTest >> testIncludes [
 { #category : #tests }
 CTLinkedQueueTest >> testAsArrayAfterOperations [
     "Test that asArray correctly represents queue state."
+	| queue |
+	queue := self queueClass new.
     queue add: 42.
     queue add: 24.
     queue remove.
@@ -206,6 +238,8 @@ CTLinkedQueueTest >> testAsArrayAfterOperations [
 { #category : #tests }
 CTLinkedQueueTest >> testAddNil [
     "Test adding nil to the queue."
+	| queue |
+	queue := self queueClass new.
     queue add: nil.
     self assert: queue size = 1.
     self assert: (queue remove isNil).
@@ -215,6 +249,8 @@ CTLinkedQueueTest >> testAddNil [
 { #category : #tests }
 CTLinkedQueueTest >> testAddAll [
 	"Test adding a collection to the queue."
+	| queue |
+	queue := self queueClass new.
 	queue addAll: #(1 2 3).
 	self assert: queue size = 3.
 	self assert: (queue remove = 1).
@@ -226,6 +262,8 @@ CTLinkedQueueTest >> testAddAll [
 { #category : #tests }
 CTLinkedQueueTest >> testPrintOn [
 	"Test printing the queue."
+	| queue |
+	queue := self queueClass new.
 	queue add: 1.
 	queue add: 2.
 	queue add: 3.
@@ -235,6 +273,8 @@ CTLinkedQueueTest >> testPrintOn [
 { #category : #tests }
 CTLinkedQueueTest >> testAddAllWithNil [
 	"Test adding a collection with nil to the queue."
+	| queue |
+	queue := self queueClass new.
 	queue addAll: #(1 nil 3).
 	self assert: queue size = 3.
 	self assert: (queue remove = 1).
@@ -246,6 +286,8 @@ CTLinkedQueueTest >> testAddAllWithNil [
 { #category : #tests }
 CTLinkedQueueTest >> testAddAllWithEmptyCollection [
 	"Test adding an empty collection to the queue."
+	| queue |
+	queue := self queueClass new.
 	queue addAll: #().
 	self assert: queue size = 0.
 	self assert: queue isEmpty.
@@ -254,6 +296,8 @@ CTLinkedQueueTest >> testAddAllWithEmptyCollection [
 { #category : #tests }
 CTLinkedQueueTest >> testAddAllWithMixedTypes [
 	"Test adding a collection with mixed types to the queue."
+	| queue |
+	queue := self queueClass new.
 	queue addAll: #(1 'two' 3.0).
 	self assert: queue size = 3.
 	self assert: (queue remove = 1).
@@ -265,6 +309,8 @@ CTLinkedQueueTest >> testAddAllWithMixedTypes [
 { #category : #tests }
 CTLinkedQueueTest >> testAddAllWithDuplicates [
 	"Test adding a collection with duplicates to the queue."
+	| queue |
+	queue := self queueClass new.
 	queue addAll: #(1 2 2 3).
 	self assert: queue size = 4.
 	self assert: (queue remove = 1).
@@ -277,6 +323,8 @@ CTLinkedQueueTest >> testAddAllWithDuplicates [
 { #category : #tests }
 CTLinkedQueueTest >> testAddAllWithNestedCollections [
 	"Test adding a collection with nested collections to the queue."
+	| queue |
+	queue := self queueClass new.
 	queue addAll: #(1 #(2 3) 4).
 	self assert: queue size = 3.
 	self assert: (queue remove = 1).
@@ -288,6 +336,8 @@ CTLinkedQueueTest >> testAddAllWithNestedCollections [
 { #category : #tests }
 CTLinkedQueueTest >> testAddAllWithNonCollection [
 	"Test adding a non-collection to the queue."
+	| queue |
+	queue := self queueClass new.
 	queue addAll: 5.
 	self assert: queue size = 1.
 	self assert: (queue remove = 5).
@@ -297,6 +347,8 @@ CTLinkedQueueTest >> testAddAllWithNonCollection [
 { #category : #tests }
 CTLinkedQueueTest >> testAddAllWithNilElement [
 	"Test adding a collection with nil element to the queue."
+	| queue |
+	queue := self queueClass new.
 	queue addAll: #(1 nil 3).
 	self assert: queue size = 3.
 	self assert: (queue remove = 1).
