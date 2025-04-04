@@ -4,12 +4,12 @@ I am a baseline
 Class {
 	#name : #BaselineOfContainersLinkedQueue,
 	#superclass : #BaselineOf,
-	#category : #BaselineOfContainersLinkedQueue
+	#category : #BaselineOfContainersLinkedQueue,
+	#package : #BaselineOfContainersLinkedQueue
 }
 
 { #category : #baselines }
 BaselineOfContainersLinkedQueue >> baseline: spec [
-
 	<baseline>
 
 	spec for: #pharo do: [		
