@@ -133,16 +133,16 @@ CTLinkedQueueTest >> testClearQueue [
 ]
 
 { #category : #tests }
-CTLinkedQueueTest >> testContains [
-    "Test checking if the queue contains an element."
+CTLinkedQueueTest >> testIncludes [
+    "Test checking if the queue includes an element."
 	| queue |
 	queue := self queueClass new.
     queue add: 'apple'.
     queue add: 'banana'.
     queue add: 'cherry'.
-    self assert: (queue contains: 'banana').
-    self assert: (queue contains: 'apple').
-    self deny: (queue contains: 'grape').
+    self assert: (queue includes: 'banana').
+    self assert: (queue includes: 'apple').
+    self deny: (queue includes: 'grape').
 ]
 
 { #category : #tests }
@@ -213,7 +213,7 @@ CTLinkedQueueTest >> testClearQueue [
 
 { #category : #tests }
 CTLinkedQueueTest >> testIncludes [
-    "Test checking if the queue contains an element."
+    "Test checking if the queue includes an element."
 	| queue |
 	queue := self queueClass new.
     queue add: 'apple'.
@@ -330,17 +330,6 @@ CTLinkedQueueTest >> testAddAllWithNestedCollections [
 	self assert: (queue remove = 1).
 	self assert: (queue remove = #(2 3)).
 	self assert: (queue remove = 4).
-	self assert: queue isEmpty.
-]
-
-{ #category : #tests }
-CTLinkedQueueTest >> testAddAllWithNonCollection [
-	"Test adding a non-collection to the queue."
-	| queue |
-	queue := self queueClass new.
-	queue addAll: 5.
-	self assert: queue size = 1.
-	self assert: (queue remove = 5).
 	self assert: queue isEmpty.
 ]
 

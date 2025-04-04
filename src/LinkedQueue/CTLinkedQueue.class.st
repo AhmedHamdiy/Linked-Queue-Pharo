@@ -1,3 +1,41 @@
+"
+I am Linked Queue,a FIFO (First-In-First-Out) queue using a linked list.
+
+I am a linear data structure where elements are added at the back and removed from the front. This linked list implementation ensures O(1) enqueue and dequeue operations by maintaining pointers to both the front and back of the queue.
+
+API Overview
+
+initialize
+Description: Sets up an empty queue.
+Usage: Automatically called when creating a new instance.
+
+new: capacity
+(Optional variant for fixed-capacity implementations, if needed.)
+
+add: anElement
+Description: Adds anElement to the back of the queue.
+Complexity: O(1)
+
+remove
+Description: Removes and returns the front element of the queue.
+Complexity: O(1)
+Behavior: Raises an error (or returns nil) if the queue is empty.
+
+peek
+Description: Returns the front element without removing it.
+Complexity: O(1)
+Behavior: Raises an error (or returns nil) if the queue is empty.
+
+asArray
+Description: Returns an array representation of the queue in FIFO order. Useful for debugging and inspection.
+
+isEmpty
+Description: Returns true if the queue has no elements.
+
+size
+Description: Returns the number of elements in the queue.
+"
+
 Class {
 	#name : #CTLinkedQueue,
 	#superclass : #Object,
