@@ -9,7 +9,7 @@ Class {
 }
 
 { #category : #baselines }
-BaselineOfContainersLinkedQueue >> baseline: spec [
+BaselineOfLinkedQueue >> baseline: spec [
 	<baseline>
 
 	spec for: #pharo do: [		
