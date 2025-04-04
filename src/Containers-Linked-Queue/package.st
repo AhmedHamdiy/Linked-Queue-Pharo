@@ -1,1 +1,1 @@
-Package { #name : #'Containers-Linked-Queue' }
+Package { #name : #'Linked-Queue' }

@@ -1,1 +1,1 @@
-Package { #name : #BaselineOfContainersLinkedQueue }
+Package { #name : #BaselineOfLinkedQueue }

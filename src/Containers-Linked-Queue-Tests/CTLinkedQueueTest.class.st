@@ -2,7 +2,7 @@ TestCase subclass: #CTLinkedQueueTest
 	instanceVariableNames: 'queue'
 	classVariableNames: ''
 	poolDictionaries: ''
-	#category: #'Containers-Linked-Queue-Tests'.
+	#category: #'Linked-Queue-Tests'.
 
 { #category : #setup }
 CTLinkedQueueTest >> setUp [

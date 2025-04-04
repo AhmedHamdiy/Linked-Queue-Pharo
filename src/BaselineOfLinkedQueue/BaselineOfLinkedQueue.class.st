@@ -2,10 +2,10 @@
 I am a baseline
 "
 Class {
-	#name : #BaselineOfContainersLinkedQueue,
+	#name : #BaselineOfLinkedQueue,
 	#superclass : #BaselineOf,
-	#category : #BaselineOfContainersLinkedQueue,
-	#package : #BaselineOfContainersLinkedQueue
+	#category : #BaselineOfLinkedQueue,
+	#package : #BaselineOfLinkedQueue
 }
 
 { #category : #baselines }
@@ -13,7 +13,7 @@ BaselineOfContainersLinkedQueue >> baseline: spec [
 	<baseline>
 
 	spec for: #pharo do: [		
-		spec package: 'Containers-Linked-Queue'.
-		spec package: 'Containers-Linked-Queue-Tests' with: [ spec requires: #('Containers-Linked-Queue')] 
+		spec package: 'Linked-Queue'.
+		spec package: 'Linked-Queue-Tests' with: [ spec requires: #('Linked-Queue')] 
 	]
 ]

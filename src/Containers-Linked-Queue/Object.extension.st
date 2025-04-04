@@ -1,6 +1,6 @@
 Extension { #name : #Object }
 
-{ #category : #'*Containers-Linked-Queue' }
+{ #category : #'*Linked-Queue' }
 Object >> asCTLink [ 
 	^ CTValueLink value: self
 ]

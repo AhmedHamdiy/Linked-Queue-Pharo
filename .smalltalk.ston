@@ -1,14 +1,14 @@
 SmalltalkCISpec {
   #loading : [
     SCIMetacelloLoadSpec {
-      #baseline : 'ContainersLinkedQueue',
+      #baseline : 'LinkedQueue',
       #directory : 'src',
       #platforms : [ #pharo ]
     }
   ],
   #testing : {
     #coverage : {
-      #packages : [ 'Containers-Linked-Queue' ]
+      #packages : [ 'Linked-Queue' ]
     }
   }
 }
