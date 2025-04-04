@@ -58,9 +58,9 @@ CTLinkedQueue >> printOn: aStream [
 { #category : #removing }
 CTLinkedQueue >> remove [
     "Removes and returns the front element of the queue, or nil if empty."
-    self isEmpty ifTrue: [^ nil].
     
     | removedValue |
+    self isEmpty ifTrue: [^ nil].
     removedValue := front value.
     front := front nextLink.
     
