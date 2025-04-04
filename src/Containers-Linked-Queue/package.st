@@ -1,1 +1,1 @@
-Package { #name : #'Linked-Queue' }
+Package { #name : #'LinkedQueue' }

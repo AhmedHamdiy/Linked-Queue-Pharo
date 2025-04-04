@@ -4,8 +4,7 @@ Class {
 	#instVars : [
 		'front', 'back', 'size'
 	],
-	#category : #'Linked-Queue',
-	#package : #'Linked-Queue'
+	#category : #'LinkedQueue'
 }
 
 { #category : #'instance creation' }
