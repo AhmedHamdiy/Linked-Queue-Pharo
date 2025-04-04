@@ -4,7 +4,7 @@ I am a baseline
 Class {
 	#name : #BaselineOfContainersLinkedQueue,
 	#superclass : #BaselineOf,
-	#category : #BaselineOfContainersLinkedQueue,
+	#category : #BaselineOfContainersLinkedQueue
 }
 
 { #category : #baselines }
